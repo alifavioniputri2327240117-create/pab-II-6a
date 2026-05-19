@@ -22,3 +22,13 @@ subprojects {
 tasks.register<Delete>("clean") {
     delete(rootProject.layout.buildDirectory)
 }
+android {
+    defaultConfig {
+        ...
+        multiDexEnabled = true // Tambahkan ini
+    }
+}
+
+dependencies {
+    implementation("androidx.multidex:multidex:2.0.1") // Tambahkan ini
+}
